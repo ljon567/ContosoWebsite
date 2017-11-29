@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <title>Contoso Bank Chat Bot</title>
+    <link href="ui.css" rel="stylesheet" />
+
+    <script type="text/javascript">
+        function toggleChat() {
+            var box = document.getElementById("chat-box");
+            var icon = document.getElementById("chat-icon");
+            if (box.className == "") {
+                box.className = "hide";
+                icon.className = "";
+            } else {
+                box.className = "";
+                icon.className = "hide";
+            }
+        }
+    </script>
+
+</head>
+<body>
+
+    <div id="title">
+        <img src="images/bank_logo.png" id="logo" />
+        <h1 id="head">Contoso Bank Limited</h1>
+    </div>
+
+    <div id="content">
+        <div id="left-content">
+            <p>
+                <br/><br/><br/>
+                Welcome to the Contoso Bank website. <br/><br/>
+                To use our services, please try out our <br/> 
+                chat bot at the bottom right of the page!
+                <br/><br/>
+            </p>
+            <img src="images/pig.jpeg" />
+        </div>
+        <div id="right-content">
+            <img src="images/people.jpeg" />
+            <img src="images/thumb.jpeg" />
+        </div>
+    </div>
+
+    <div id="chat">
+        <img id="chat-icon" src="images/chat-icon.png" onclick="toggleChat()" />
+        <div id="chat-box" class="hide">
+            <iframe src='https://webchat.botframework.com/embed/contoso-bot-ljon567?s=3wjAAvfAe7A.cwA.-Zk.dGKkVXRWqYQ1iLz-85paIlFqvk3AOxaOnSClf7bMdlE'></iframe>
+			<img src="images/close.png" onclick="toggleChat()" />
+        </div>
+    </div>
+
+</body>
+</html>
